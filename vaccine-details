@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccine Details - VaxiWell</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vaccine Details</h1>
+        <form id="vaccineForm">
+            <input type="text" placeholder="Vaccine Name" required>
+            <input type="date" placeholder="Date Administered" required>
+            <select required>
+                <option value="">Select Status</option>
+                <option value="taken">Taken</option>
+                <option value="not_taken">Not Taken</option>
+            </select>
+            <button type="submit" class="primary-btn">Add</button>
+        </form>
+    </div>
+</body>
+</html>
