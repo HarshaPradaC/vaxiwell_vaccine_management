@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Registration - VaxiWell</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Child's Details</h1>
+        <form id="childForm">
+            <input type="text" placeholder="Child's Name" required>
+            <input type="date" placeholder="Date of Birth" required>
+            <select required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                
+            </select>
+            <button type="button" class="primary-btn" onclick="nextStep()">Next</button>
+        </form>
+    </div>
+
+    <script>
+        function nextStep() {
+            // Save child's details and redirect to parents' details form
+            location.href = 'parents-details.html';
+        }
+    </script>
+</body>
+</html>
