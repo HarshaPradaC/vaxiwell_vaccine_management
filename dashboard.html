@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - VaxiWell</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard</h1>
+        <h2>Child Details</h2>
+        <div id="child-details">
+            <p>Name: [Child's Name]</p>
+            <p>DOB: [Child's DOB]</p>
+        </div>
+
+        <h2>Add Vaccine</h2>
+        <form id="vaccine-form" onsubmit="addVaccine(); return false;">
+            <input type="text" id="vaccine_name" placeholder="Vaccine Name" required>
+            <input type="date" id="schedule_date" required>
+            <select id="status" required>
+                <option value="Taken">Taken</option>
+                <option value="Not Taken">Not Taken</option>
+            </select>
+            <button type="submit">Add Vaccine</button>
+        </form>
+
+        <h2>Existing Vaccines</h2>
+        <ul id="vaccine-list">
+            <!-- Vaccine entries will be dynamically added here -->
+        </ul>
+    </div>
+
+    <script>
+        function addVaccine() {
+            const vaccineName = document.getElementById('vaccine_name').value;
+            const scheduleDate = document.getElementById('schedule_date').value;
+            const status = document.getElementById('status').value;
+
+            const vaccineList = document.getElementById('vaccine-list');
+            const listItem = document.createElement('li');
+            listItem.textContent = `Vaccine: ${vaccineName}, Date: ${scheduleDate}, Status: ${status}`;
+            vaccineList.appendChild(listItem);
+
+            // Clear form fields
+            document.getElementById('vaccine-form').reset();
+        }
+    </script>
+</body>
+</html>
