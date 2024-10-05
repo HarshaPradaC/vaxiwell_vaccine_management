@@ -91,3 +91,18 @@ form {
         font-size: 1em;
     }
 }
+
+.chatbot-access {
+    margin-top: 20px;
+}
+
+.chatbot-icon {
+    font-size: 40px; /* Size of the emoji */
+    color: #007bff; /* Color of the emoji */
+    text-decoration: none; /* Remove underline */
+    transition: transform 0.2s;
+}
+
+.chatbot-icon:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
