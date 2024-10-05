@@ -5,11 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parents' Details - VaxiWell</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function generateCredentials(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Generate random username and password
+            const username = 'user_' + Math.random().toString(36).substr(2, 8);
+            const password = Math.random().toString(36).substr(2, 8);
+
+            // Display the credentials in an alert box
+            alert(`Generated Credentials:\nUsername: ${username}\nPassword: ${password}`);
+
+            // Optionally redirect to the dashboard after generating credentials
+            // window.location.href = 'dashboard.html'; // Uncomment to redirect
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>Parents' Details</h1>
-        <form id="parentsForm">
+        <form id="parentsForm" onsubmit="generateCredentials(event);">
             <input type="text" placeholder="Mother's Name" required>
             <input type="text" placeholder="Father's Name" required>
             <input type="text" placeholder="Mother's Mobile No" required>
